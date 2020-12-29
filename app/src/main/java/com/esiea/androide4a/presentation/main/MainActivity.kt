@@ -1,8 +1,10 @@
-package com.esiea.androide4a
+package com.esiea.androide4a.presentation.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import com.esiea.androide4a.presentation.main.MainViewModel
+import com.esiea.androide4a.R
 import org.koin.android.ext.android.inject
 import kotlinx.android.synthetic.main.activity_main.*
 
