@@ -2,7 +2,6 @@ package com.esiea.androide4a.injection
 
 import android.app.Application
 import org.koin.android.ext.koin.androidContext
-import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.core.context.startKoin
 
 class EsieaApplication : Application(){

@@ -4,11 +4,14 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class MainViewModel :ViewModel(){
+    fun onClickedIncrement() {
+    counter.value = (counter.value ?: 0) + 1
+    }
 
-    val text: MutableLiveData<String> = MutableLiveData()
+    val counter: MutableLiveData<Int> = MutableLiveData()
 
     init {
-        text.value="Texte livedata"
+        counter.value=0
 
 
     }

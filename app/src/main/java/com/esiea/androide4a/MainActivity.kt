@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import org.koin.android.ext.android.inject
+import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,9 +16,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        main_button.setOnClickListener {
+            mainViewModel.onClickedIncrement()
+        }
 
-        mainViewModel.text.observe(this, Observer {
-            main_text.text
+        mainViewModel.counter.observe(this, Observer {
+            value -> main_text.text = value.toString()
         })
+
+
     }
 }
