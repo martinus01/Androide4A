@@ -29,7 +29,7 @@ localisation du pad de tire et de l'agence acteur du tire
  <img src="screenAppli/create_account.JPG" width="300" height="550" />  </p>
  cette page permet de cree un nouvelle user pour ce connecte a l'appli (exemple login = martin , password = martin)
  <p align="center">
- <img src="screenAppli/login_special.jpg" width="300" height="550" />  </p>
+ <img src="screenAppli/login_special.JPG" width="300" height="550" />  </p>
  
 ### Icone de l'application
  <p align="center">
