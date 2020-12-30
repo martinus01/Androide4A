@@ -29,4 +29,11 @@ class MainViewModel(
             loginliveData.value = loginStatus}
         }
     }
+
+
+    fun onClickedCreate(emailUser: String,password: String){
+        viewModelScope.launch(Dispatchers.IO){
+            createUserUseCase.invoke(user = User(emailUser,password))
+        }
+    }
 }
