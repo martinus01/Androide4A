@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         main_button.setOnClickListener {
-            mainViewModel.onClickedIncrement()
+            mainViewModel.onClickedIncrement("")
         }
 
         mainViewModel.counter.observe(this, Observer {
