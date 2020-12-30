@@ -24,6 +24,14 @@ localisation du pad de tire et de l'agence acteur du tire
 </p>
 <p align="center">pour faire retour , on utilise le retour du portable<p>
  
+ #### Utilisation de page de login
+ <p align="center">
+ <img src="screenAppli/create_account.JPG" width="300" height="550" />  </p>
+ cette page permet de cree un nouvelle user pour ce connecte a l'appli (exemple login = martin , password = martin)
+ <p align="center">
+ <img src="screenAppli/login_special.JPG" width="300" height="550" />  </p>
+ la page permet de se connecter a l'appli dans notre exemple ( login = enzo , password = enzo)
+ 
 ### Icone de l'application
  <p align="center">
  <img src="screenAppli/List_icon.jpg" width="200" height="250" />  </p>
