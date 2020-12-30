@@ -7,4 +7,22 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#7C7C7C</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="ColorMainText"></color>
+    <color name="ColorTitleText"></color>
+    <color name="ColorSplashText">#F44336</color>
+    <color name="ColorSplash2Text">#2D655F</color>
+    <color name="BackSplashScreen">#750000FF</color>
+    <color name="Colorfusee">#AEADAD</color>
+    <color name="Colorlist">#7A7A7A</color>
+    <color name="ColorAgency">#005E55</color>
+    <color name="ColorSection">#5E1B00</color>
+    <color name="colorsectiontxt">#FFFFFF</color>
+    <color name="colorfond">#000000</color>
+    <color name="colorlist">#FFFFFF</color>
+    <color name="colorlistfond">#46000000</color>
+    <color name="colordetailfond">#65000000</color>
+    <color name="colordetail">#FFFFFF</color>
 </resources>
