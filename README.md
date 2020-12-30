@@ -8,7 +8,7 @@ localisation du pad de tire et de l'agence acteur du tire
 ### Splash Screen
  <p align="center">
 <img src="screenAppli/Splash_screen.JPG" width="300" height="550" />  </p>
-<p>ici, le splash screen attend 1 seconde avant de demarrer l'application, juste pour la cosmétique de l'application</p>
+<p>ici, la splash screen attend 1 seconde avant de demarrer l'application, juste pour la cosmétique de l'application</p>
 
 ### Utilisation de la liste des fusée
 <p align="center">
