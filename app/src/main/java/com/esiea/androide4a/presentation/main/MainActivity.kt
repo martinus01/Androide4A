@@ -1,5 +1,6 @@
 package com.esiea.androide4a.presentation.main
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -23,8 +24,14 @@ class MainActivity : AppCompatActivity() {
         mainViewModel.loginliveData.observe(this, Observer {
             when(it){
                 is LoginSucess ->{
-                    //TODO navigate
-                }
+                    val intent: Intent = Intent(this,
+                        LaunchActivity::class.java)
+                    startActivity(intent)
+                }/*
+                is WrongPassword ->{
+                    var toast:Toast=Toast.makeText(this,"wrong password,try again",Toast.LENGTH_LONG)
+                    toast.show()
+                }*/
                 LoginERROR -> {
                     MaterialAlertDialogBuilder(this)
                         .setTitle("erreur")
@@ -38,7 +45,13 @@ class MainActivity : AppCompatActivity() {
         })
         login_button.setOnClickListener {
             mainViewModel.onClickedLogin(login_edit.text.toString().trim(),password_edit.text.toString())
+            mainViewModel.userExist(login_edit.text.toString().trim(),password_edit.text.toString())
         }
+        create_account_button.setOnClickListener{
+            val i= Intent(this,RegisterUser::class.java)
+            startActivity(i)
+        }
+
 
 
     }

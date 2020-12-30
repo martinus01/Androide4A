@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="136dp"
+    android:padding="6dip"
+    android:background="@color/colorlistfond">
+
+    <ImageView
+        android:id="@+id/fusee_image"
+        android:layout_width="92dp"
+        android:layout_height="130dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dip"
+        android:contentDescription="TODO"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/titre_mission"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_above="@+id/pad_name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toRightOf="@id/fusee_image"
+        android:gravity="center_vertical"
+        android:text="titre_mission"
+        android:textColor="@color/colorlist"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/titre_agency"
+        android:layout_width="291dp"
+        android:layout_height="33dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="1dp"
+        android:layout_toRightOf="@+id/fusee_image"
+        android:textColor="@color/colorlist"
+        android:singleLine="true"
+        android:text="agency"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/pad_name"
+        android:layout_width="289dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/titre_agency"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toRightOf="@id/fusee_image"
+        android:textColor="@color/colorlist"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Description"
+        android:textSize="16sp" />
+
+</RelativeLayout>

@@ -17,7 +17,7 @@ class SpaceScreenActivity : AppCompatActivity() {
 
         image_icon.alpha=0f
         image_icon.animate().setDuration(1500).alpha(1f).withEndAction{
-            val i= Intent(this,MainActivity::class.java)
+            val i= Intent(this,LaunchActivity::class.java)
             startActivity(i)
             overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
             finish()

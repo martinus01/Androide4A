@@ -16,7 +16,8 @@ data class UserLocal(
 
 fun User.toData():UserLocal{
     return UserLocal(
-        email = this.email
+        email = this.email,
+        password = this.password
     )
 }
 fun UserLocal.toEntity():User{

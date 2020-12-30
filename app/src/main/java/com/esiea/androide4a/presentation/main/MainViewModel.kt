@@ -16,12 +16,19 @@ class MainViewModel(
 ) :ViewModel(){
 
     val loginliveData: MutableLiveData<LoginStatus> = MutableLiveData()
+    val createLiveData: MutableLiveData<CreateAccountStatus> = MutableLiveData()
 
-    fun onClickedLogin(emailUser: String, password: String) {
+    fun onClickedLogin(email: String, password: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            val user = getUserUseCase.invoke(emailUser)
-            val loginStatus= if(user !=null){
-                LoginSucess(user.email)
+            val user= getUserUseCase.invoke(email,password)
+            var loginStatus:LoginStatus =
+                if(user !=null){
+                    if(user.password==password){
+                       LoginSucess(user.email,user.password)
+                    }
+                    else {//TODO wrong password
+                    }
+                LoginSucess(user.email,user.password)
             }else{
                 LoginERROR
             }
@@ -30,10 +37,33 @@ class MainViewModel(
         }
     }
 
+    fun onClickedCreate(email: String,password: String) {
+        viewModelScope.launch(Dispatchers.IO) {
 
-    fun onClickedCreate(emailUser: String,password: String){
-        viewModelScope.launch(Dispatchers.IO){
-            createUserUseCase.invoke(user = User(emailUser,password))
+
+            createUserUseCase.invoke(user = User(email, password))
         }
     }
-}
+    fun userExist(email: String,password: String)
+    {
+        viewModelScope.launch(Dispatchers.IO){
+
+            var createAccountStatus:CreateAccountStatus
+            if(email == "")
+            {
+                createAccountStatus=CreateERROR
+            }
+            val user:User?=getUserUseCase.invoke(email,password)
+            createAccountStatus=if(user==null) {
+                CreateSucess(email, password)
+            }else{
+                CreateERROR
+            }
+            withContext(Dispatchers.Main){
+                createLiveData.value=createAccountStatus
+            }
+        }
+    }
+
+    }
+
