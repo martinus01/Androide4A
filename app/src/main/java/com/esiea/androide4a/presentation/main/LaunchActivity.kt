@@ -17,7 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class LaunchActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_launch_activity)
+        setContentView(R.layout.activity_launch)
 
         val BASE_URL: String ="https://raw.githubusercontent.com/martinus01/SpaceLaunch_appli/develop/"
         val retrofit = Retrofit.Builder()

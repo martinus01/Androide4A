@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/create_button"
+        android:id="@+id/create_button_account"
         style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
         >
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/login_edit"
+            android:id="@+id/login_edit_account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -62,7 +62,7 @@
         >
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password_edit"
+            android:id="@+id/password_edit_account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="password"

@@ -11,8 +11,8 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class MainViewModel(
-    private val createUserUseCase:CreateUserUseCase,
-    private val getUserUseCase:GetUserUseCase
+     val createUserUseCase:CreateUserUseCase,
+     val getUserUseCase:GetUserUseCase
 ) :ViewModel(){
 
     val loginliveData: MutableLiveData<LoginStatus> = MutableLiveData()
@@ -22,13 +22,8 @@ class MainViewModel(
         viewModelScope.launch(Dispatchers.IO) {
             val user= getUserUseCase.invoke(email,password)
             var loginStatus:LoginStatus =
-                if(user !=null){
-                    if(user.password==password){
-                       LoginSucess(user.email,user.password)
-                    }
-                    else {//TODO wrong password
-                    }
-                LoginSucess(user.email,user.password)
+                if(email !=null&&password!=null){
+                       LoginSucess(email,password)
             }else{
                 LoginERROR
             }
@@ -39,9 +34,15 @@ class MainViewModel(
 
     fun onClickedCreate(email: String,password: String) {
         viewModelScope.launch(Dispatchers.IO) {
-
-
-            createUserUseCase.invoke(user = User(email, password))
+            val createAccountStatus:CreateAccountStatus =
+                if(email !=null&&password!=null){
+                        createUserUseCase.invoke(user = User(email, password))
+                        CreateSucess(email,password)
+                }else{
+                    CreateERROR
+                }
+            withContext(Dispatchers.Main){
+                createLiveData.value = createAccountStatus}
         }
     }
     fun userExist(email: String,password: String)
