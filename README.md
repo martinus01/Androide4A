@@ -1,7 +1,7 @@
 # Android4A
 
 ## Presentation
-application afficahnt les prochain decollage de fusée prévu avec l'heure de decollage , les information sur la fusée et sa mission, ainsi que
+application affichant les prochain decollage de fusée prévu avec l'heure de decollage , les information sur la fusée et sa mission, ainsi que
 localisation du pad de tire et de l'agence acteur du tire
 
 ## Explication d'utilisation
